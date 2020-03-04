@@ -60,15 +60,15 @@ import React, { Component } from 'react'
         <form onSubmit ={this.handleSubmit}>
           <div>
             <label>Name</label>
-            <input type="text" name="name" onChange={this.handleChange} />
+            <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
           </div>
           <div>
             <label>Email</label>
-            <input type="email" name="email" onChange={this.handleChange}/>
+            <input type="email" name="email"value={this.state.email} onChange={this.handleChange}/>
           </div>
           <div>
             <label>Gen</label>
-            <input type="number" name="gen" onChange={this.handleChange}/>
+            <input type="number" name="gen" value={this.state.gen}onChange={this.handleChange}/>
           </div>
             <button type="submit">Add User</button>
         </form>
