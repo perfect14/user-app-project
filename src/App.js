@@ -56,17 +56,17 @@ import React, { Component } from 'react'
 
   render() {
     return (
-      <div>
-        <form onSubmit ={this.handleSubmit}>
-          <div>
+      <div className="App">
+        <form onSubmit ={this.handleSubmit}className="form" >
+          <div className="form-input">
             <label>Name</label>
             <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
           </div>
-          <div>
+          <div className="form-input">
             <label>Email</label>
             <input type="email" name="email"value={this.state.email} onChange={this.handleChange}/>
           </div>
-          <div>
+          <div className="form-input">
             <label>Gen</label>
             <input type="number" name="gen" value={this.state.gen}onChange={this.handleChange}/>
           </div>
@@ -74,7 +74,7 @@ import React, { Component } from 'react'
         </form>
         {this.state.users.map(user=>{
           return(
-            <div>
+            <div className="info">
               <h3>Name:{user.name}</h3>
               <p>Email:{user.email}</p>
               <h3>Gen{user.gen}</h3>
