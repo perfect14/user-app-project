@@ -16,42 +16,71 @@ import React, { Component } from 'react'
         gen:5
       },
       {
-        name:"yvonne Nelson",
+        name:"Yvonne Nelson",
         email:"nelly@email.com",
         gen:8
       }
 
-       ]
-     }
+       ],
+       name:"",
+       email:"",
+       gen:""
+     };
 
    }
+
+
+
+
+   handleSubmit=(e) => {
+     e.preventDefault();
+     const newUser= {
+       name:this.state.name,
+       email:this.state.email,
+       gen:this.state.gen
+     }
+     this.setState({
+       users:[...this.state.users,newUser],
+       name:"",
+       email:"",
+       gen:""
+     })
+   }
+
+   handleChange=(e) =>{
+     this.setState({
+       [e.target.name]:e.target.value
+     });
+   }
+
+
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit ={this.handleSubmit}>
           <div>
             <label>Name</label>
-            <input type="text" name="name" />
+            <input type="text" name="name" onChange={this.handleChange} />
           </div>
           <div>
             <label>Email</label>
-            <input type="email" name="email" />
+            <input type="email" name="email" onChange={this.handleChange}/>
           </div>
           <div>
             <label>Gen</label>
-            <input type="number" name="gen" />
+            <input type="number" name="gen" onChange={this.handleChange}/>
           </div>
             <button type="submit">Add User</button>
         </form>
-        {this.state.users.map(user)=>{
+        {this.state.users.map(user=>{
           return(
             <div>
-              <h3>Name</h3>
-              <p>Email</p>
-              <h3>Gen</h3>
+              <h3>Name:{user.name}</h3>
+              <p>Email:{user.email}</p>
+              <h3>Gen{user.gen}</h3>
             </div>
-          )
-        }}
+          );
+        })}
       </div>
     )
   }
