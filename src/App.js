@@ -1,5 +1,7 @@
 import './App.css';
 import React, { Component } from 'react'
+import UsersForm from './components/UsersForm';
+import UserInfo from './components/UserInfo'
 
  class App extends Component {
    constructor(props){
@@ -32,53 +34,29 @@ import React, { Component } from 'react'
 
 
 
-   handleSubmit=(e) => {
-     e.preventDefault();
-     const newUser= {
-       name:this.state.name,
-       email:this.state.email,
-       gen:this.state.gen
-     }
+addNewUser=(newUser) => {
      this.setState({
        users:[...this.state.users,newUser],
-       name:"",
-       email:"",
-       gen:""
+       
      })
    }
 
-   handleChange=(e) =>{
-     this.setState({
-       [e.target.name]:e.target.value
-     });
-   }
+   
 
 
   render() {
     return (
       <div className="App">
-        <form onSubmit ={this.handleSubmit}className="form" >
-          <div className="form-input">
-            <label>Name</label>
-            <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-          </div>
-          <div className="form-input">
-            <label>Email</label>
-            <input type="email" name="email"value={this.state.email} onChange={this.handleChange}/>
-          </div>
-          <div className="form-input">
-            <label>Gen</label>
-            <input type="number" name="gen" value={this.state.gen}onChange={this.handleChange}/>
-          </div>
-            <button type="submit">Add User</button>
-        </form>
-        {this.state.users.map(user=>{
+        <UsersForm  addUser ={this.addNewUser}/>
+        {this.state.users.map((user, index) => {
           return(
-            <div className="info">
-              <h3>Name:{user.name}</h3>
-              <p>Email:{user.email}</p>
-              <h3>Gen{user.gen}</h3>
-            </div>
+            <UserInfo 
+              key={index}
+              name={user.name}
+              email={user.email}
+              gen={user.gen}
+            
+            />
           );
         })}
       </div>
