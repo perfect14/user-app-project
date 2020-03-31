@@ -1,45 +1,19 @@
 import './App.css';
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addUser} from './store/UserActions'
 import UsersForm from './components/UsersForm';
 import UserInfo from './components/UserInfo'
 
  class App extends Component {
-   constructor(props){
-     super(props);
-     this.state={
-       users:[{
-         name:"Ephya Delma",
-         email:"ephya@email.com",
-         gen:2
-       },
-       {
-        name:"John Dumelo",
-        email:"john@email.com",
-        gen:5
-      },
-      {
-        name:"Yvonne Nelson",
-        email:"nelly@email.com",
-        gen:8
-      }
-
-       ],
-       name:"",
-       email:"",
-       gen:""
-     };
-
-   }
+   
 
 
 
 
-addNewUser=(newUser) => {
-     this.setState({
-       users:[...this.state.users,newUser],
-       
-     })
-   }
+addNewUser=newUser =>{
+  this.props.addUser (newUser)
+}
 
    
 
@@ -48,7 +22,7 @@ addNewUser=(newUser) => {
     return (
       <div className="App">
         <UsersForm  addUser ={this.addNewUser}/>
-        {this.state.users.map((user, index) => {
+        {this.props.users.map((user, index) => {
           return(
             <UserInfo 
               key={index}
@@ -63,4 +37,15 @@ addNewUser=(newUser) => {
     )
   }
 }
-export default App;
+
+const mapStateToProps=(state) =>({
+  users:state.users
+});
+
+const mapDispatchToProps={
+  addUser:addUser
+}
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
