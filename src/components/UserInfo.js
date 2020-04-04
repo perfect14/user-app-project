@@ -1,6 +1,6 @@
 import React from 'react'
 
-function UserInfo({name,email,gen}) {
+const UserInfo = ({name,email,gen})=> {
     return (
         <div className="info">
               <h3>Name:{name}</h3>

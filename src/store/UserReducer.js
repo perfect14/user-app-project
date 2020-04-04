@@ -1,5 +1,6 @@
 const initialState ={
-    users:[{
+    users:[
+      {
         name:"Ephya Delma",
         email:"ephya@email.com",
         gen:2
@@ -16,9 +17,7 @@ const initialState ={
      }
 
       ],
-      name:"",
-      email:"",
-      gen:""
+      
     };
 
   
@@ -33,14 +32,12 @@ const UserReducer = (state=initialState , action) => {
                 email:action.payload.email,
                 gen:action.payload.gen
               }
-              return {...state , users:[...this.state.users,newUser]};
-        
-    
-        default:
+              return {...state , users:[...state.users,newUser]};
+         default:
             return state;
     }
 }
 
 
 
-export default UserReducer
+export default UserReducer;
