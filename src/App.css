@@ -8,14 +8,26 @@
 .info{
   width: 30%;
   min-height: 500px;
-  background-color: cadetblue;
+  background-color: violet;
   margin:0px;
-  padding: 15px;
+  padding: 20px;
 }
 .form{
   width: 70%;
   height: 300px;
-  background-color:mediumturquoise;
+  background-color:rgb(186, 72, 209);
   margin-right:50px;
   padding: 15px;
+  border-radius: 5%;
+  margin-top: 20%;
+}
+
+.editform{
+  width: 15%;
+  height: 300px;
+  background-color:rgb(186, 72, 209);
+  margin-left:50px;
+  padding: 15px;
+  border-radius: 10%;
+
 }
