@@ -1,5 +1,6 @@
-import React from 'react'
-import{ Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../App.css'
 
 const UserInfo = ({name,email,gen,id, removeUser})=> {
     const handleClick = () =>{
@@ -11,8 +12,8 @@ const UserInfo = ({name,email,gen,id, removeUser})=> {
               <h3>Name:{name}</h3>
               <p>Email:{email}</p>
               <h3>Gen{gen}</h3>
-              <button onClick={handleClick}>Remove User</button>
-              <Link to= { `/edit/${id}` }>Edit User</Link>
+              <button onClick={handleClick} className="remove-user">Remove User</button>
+              <Link to= { `/edit/${id}` } className="edit-user">Edit User</Link>
         </div>
     )
 }

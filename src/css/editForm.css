@@ -1,0 +1,13 @@
+.editForm {
+  position: relative;
+  left: 5rem;
+}
+
+.submitButton {
+  height: 2.7rem;
+  width: 18.5rem;
+  background: darkblue;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}

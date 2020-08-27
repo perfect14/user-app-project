@@ -1,25 +1,40 @@
 .App{
-  width: 80%;
+  width: 90%;
   min-height: 70vh;
-  background-color: aqua;
+  /* background-color: aqua; */
   margin-left: 3px;
   display: flex;
 }
-.info{
-  width: 30%;
-  min-height: 500px;
-  background-color: violet;
-  margin:0px;
-  padding: 20px;
-}
+.info {
+    width: 260px;
+    min-height: 300px;
+    background-color: violet;
+    margin-left: 2px;
+    margin-top: 7%;
+    border-radius: 5%;
+      padding: 20px;
+    }
+    .logoutButton{
+      background-color: black;
+      color: white;
+      font-size:15px;
+      height: 100px;
+      width: 70px;
+      margin-top: 5%;
+      margin-left: 5%;
+    }
+
 .form{
-  width: 70%;
+  width: 80%;
   height: 300px;
   background-color:rgb(186, 72, 209);
-  margin-right:50px;
+  margin-right:5;
   padding: 15px;
   border-radius: 5%;
-  margin-top: 20%;
+  /* margin-top: 20%; */
+  float: right;
+  left: 0;
+  
 }
 
 .editform{
@@ -31,3 +46,14 @@
   border-radius: 10%;
 
 }
+
+  /* @media only screen and  (max-width: 780px) ,(min-width:500px){
+.info { 
+    width: 40%;
+    min-height: 500px;
+    background-color: violet;
+    margin-left: -65%;
+      padding: 20px;}
+}
+ */
+

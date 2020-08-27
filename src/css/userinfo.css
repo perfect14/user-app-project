@@ -1,0 +1,23 @@
+/* 
+  .info {
+    width: 30%;
+    min-height: 500px;
+    background-color: violet;
+    margin-left: -35%;
+      padding: 20px;
+    }
+
+.remove-user{
+  background-color: red;
+}
+.edit-user{
+  background-color: palevioletred;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .info {
+    position: relative;
+    top: 6rem;
+    left: 1rem;
+  }
+} */

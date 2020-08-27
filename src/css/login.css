@@ -1,0 +1,76 @@
+.login_Formsss {
+  position: relative;
+  left: 5rem;
+}
+h1 {
+  color: black;
+  text-align: center;
+  padding-top: 2rem;
+  font-weight: bolder;
+}
+.backgrounds {
+  width: 27rem;
+  height: 32rem;
+  background-color:darkkhaki;
+  position: relative;
+  margin-bottom: 20px;
+  left:20rem;
+  /* top: 5rem; */
+  border-radius: 10%;
+}
+#inputs {
+  margin-bottom: 2rem;
+  display: block;
+}
+#signInButtons {
+  height: 3rem;
+  width: 17rem;
+  background-color: coral;
+  color: white;
+  font-size: 1rem;
+  border: coral;
+  font-weight: bold;
+  border-radius: 10%;
+  position: relative;
+  right: 0.1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+
+}
+#googleButtons {
+  height: 3rem;
+  width: 17rem;
+  background-color: mediumspringgreen;
+  color: white;
+  font-size: 1rem;
+  border: mediumspringgreen;
+  font-weight: bold;
+  border-radius: 10%;
+  position: relative;
+  right: 0.1rem;
+   margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+#register {
+  height: 3rem;
+  width: 17rem;
+  background-color: darkblue;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10%;
+  position: relative;
+  right: 0.1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border: darkblue;
+}
+ 
+ 
+
+@media only screen and  (max-width: 780px){
+  .backgrounds{
+    position: relative;
+    left: 2rem;
+  }
+}
